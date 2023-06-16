@@ -25,23 +25,3 @@ let lightbox = new SimpleLightbox('.gallery a', {
    enableKeyboard: true,
    close: true,
 });
-ulEl.addEventListener("click",onGalleryItemClick);
-function onGalleryItemClick(event){
-   event.preventDefault();
-   if(event.target.nodeName !== "IMG"){
-       return;
-   }
-    const instance = basicLightbox.create(`<img src=
-     "${event.target.dataset.source}"
-      width="800" height ="600"/>`,
-    { handler :null,
-onShow(instance){
-    this.handler=closeModal.bind(instance)
- document.addEventListener(keydown,this.handler)
- },
-onClose(){
-document.removeEventListener(keydown,this.handler)
-},
-});
-instance.show();
-};

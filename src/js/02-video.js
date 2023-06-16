@@ -11,15 +11,5 @@ const getTime = localStorage.getItem(KEY_STORAGE);
    player.setCurrentTime(JSON.parse(getTime));
   }; 
 
-player.setCurrentTime()
-.then(function(seconds) {})
-.catch(function(error) {
-    switch (error.name) {
-        case 'RangeError':
-            break;
-            default:
-            break;
-    }
-});
 
     
